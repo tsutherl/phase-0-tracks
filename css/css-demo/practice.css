@@ -9,5 +9,11 @@
 }
 .lists {
 	font-size: .8em;
-	
+
+}
+#contact-info:hover {
+	background-color: blue;
+}
+ul li {
+	font-size: .2em;
 }
