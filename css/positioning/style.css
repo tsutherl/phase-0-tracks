@@ -1,3 +1,19 @@
 #octopus {
-	margin: 5% 35%;
+	margin: 15% 35%;
+	
+}
+#glasses {
+	position: absolute;
+	top: 35%;
+	right: 45%;
+	width: 15%;
+	height: 15%;
+	
+}
+#hat {
+	position: absolute;
+	left: 34%;
+	top: 10%;
+	
+
 }
