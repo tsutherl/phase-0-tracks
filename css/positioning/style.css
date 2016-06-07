@@ -1,19 +1,21 @@
-#octopus {
-	margin: 15% 35%;
-	
+#parent {
+	margin: 25% 30%;
+	position: relative;
 }
-#glasses {
+#kid {
 	position: absolute;
-	top: 35%;
-	right: 45%;
-	width: 15%;
-	height: 15%;
-	
+	left: 0;
+	top: 0;
 }
 #hat {
 	position: absolute;
-	left: 34%;
-	top: 10%;
-	
-
+	left: -30px;
+	top: -45px;
+	z-index: 3;
+}
+#glasses {
+	position: absolute;
+	left: 43px;
+	top: 98px;
+	z-index: 2;
 }
