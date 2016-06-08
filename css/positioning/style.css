@@ -2,11 +2,6 @@
 	margin: 25% 30%;
 	position: relative;
 }
-#kid {
-	position: absolute;
-	left: 0;
-	top: 0;
-}
 #hat {
 	position: absolute;
 	left: -30px;
