@@ -1,0 +1,28 @@
+* {
+	font-family: Helvetica;
+}
+header {
+  background: #ccccff;
+  display: block;
+  text-align: center;
+}
+.column-1 {
+  display: inline-block;
+  vertical-align: top;
+  background: pink;
+  max-width: 45%;
+  padding: 0 0 25px 0;
+  margin-left:10px;
+  
+}
+.column-2 {
+  display: inline-block;
+  vertical-align: top;
+  background: #66ffcc;
+  max-width: 45%;
+  padding: 0 0 78px 0;
+}
+footer {
+  background: #c9cfcd;
+  padding: 10px 10px 10px 10px;
+}
