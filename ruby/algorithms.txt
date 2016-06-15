@@ -1,0 +1,16 @@
+- first the robot needs to figure out what floor it's going to
+- if there is only one button outside the elevator it should be pressed
+- otherwise if there are two buttons 
+    - if the floor the robot needs to go to is higher than the floor it is on then the robot needs to press the top button 
+    - or if the floor it's going to is lower than the number of the floor it is on then it should press the bottom button
+    - otherwise it is on the right floor already
+- once the doors open the robot should move forward until it is in the middle of the elevator 
+- the robot should turn right until it's facing the button panel
+- the robot should move forward until the button panel is reached
+- the robot should move its button pusher up and to the left until it is at the very top left button
+- until the button with the matching floor number is found:
+    - move button pusher to the right by one button
+    - if no button is left on that row then go down one button 
+    -move button pusher to the left by one button
+    - if no button is left on that row then move down a button
+- when the number on the button matches the floor destination, press the button          
