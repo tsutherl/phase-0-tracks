@@ -1,3 +1,4 @@
+Algorithm For Using an Elevator
 - first the robot needs to figure out what floor it's going to
 - if there is only one button outside the elevator it should be pressed
 - otherwise if there are two buttons 
@@ -14,3 +15,23 @@
     -move button pusher to the left by one button
     - if no button is left on that row then move down a button
 - when the number on the button matches the floor destination, press the button          
+
+Algorithm For Brushing Teeth
+- unscrew cap from toothpaste
+- hold toothpaste in left hand and hold tooth brush in right hand 
+- bring left hand holding toothpaste to the head of the tooth brush and squeeze toothpaste across the brush.
+- put toothpaste down
+- bring brush to mouth and move it to the bottom back right tooth
+- until brush is at the bottom back left tooth
+    - move brush back and forth while slowly moving to the left one tooth at a time
+- turn brush so it is pointing up and is against the top back left tooth
+- until brush is at the top back right tooth
+    - move brush back and forth while slowly moving to the right one tooth at a time
+- move brush to the middle of the mouth and point brush down against tongue
+- brush back and fourth long tongue 6 times
+- remove brush from mouth and rinse it in water
+- put toothbrush down
+- spit toothpaste into sink 
+- cup hands together and bring water to mouth to rinse it
+- gargle and spit water out
+- dry hands and face on towel
