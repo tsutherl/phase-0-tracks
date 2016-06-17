@@ -4,9 +4,9 @@ puts "How many employees will be processed"
 
 number_of_emplyees= gets.to_i
 
-quiz=1
+quiz=0
 until quiz==number_of_emplyees
-
+  quiz+=1
   puts "Welcome to Werewolf Inc."
 
   puts "What is your name?"
@@ -23,6 +23,16 @@ until quiz==number_of_emplyees
 
   puts "Would you like to enroll in the company’s health insurance (yes or no)?"
   health_insurance=gets.chomp
+
+  allergies=nil
+  until allergies == "done" 
+    puts "Name any allergies (type 'done' when finished with this question)"
+    allergies = gets.chomp
+    if allergies == "sunshine"
+      puts "Probably a vampire."
+      exit
+    end
+  end
 
   vampire_detection=nil
 
