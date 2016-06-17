@@ -1,40 +1,48 @@
 #Vampire Detection Quiz
 
-puts "Welcome to Werewolf Inc."
+puts "How many employees will be processed"
 
-puts "What is your name?"
-name=gets.chomp
+number_of_emplyees= gets.to_i
 
-puts "How old are you?" 
-age=gets.to_f
+quiz=1
+until quiz==number_of_emplyees
 
-puts "What year were you born?"
-year_of_birth=gets.to_i
+  puts "Welcome to Werewolf Inc."
 
-puts "Our company cafeteria serves garlic bread. Should we order some for you (yes or no)?"
-garlic_bread=gets.chomp
+  puts "What is your name?"
+  name=gets.chomp
 
-puts "Would you like to enroll in the company’s health insurance (yes or no)?"
-health_insurance=gets.chomp
+  puts "How old are you?" 
+  age=gets.to_f
 
-vampire_detection=nil
+  puts "What year were you born?"
+  year_of_birth=gets.to_i
 
-if age == 2016-year_of_birth && (garlic_bread=="yes" || health_insurance=="yes")
-  vampire_detection="Probably not a vampire."
+  puts "Our company cafeteria serves garlic bread. Should we order some for you (yes or no)?"
+  garlic_bread=gets.chomp
+
+  puts "Would you like to enroll in the company’s health insurance (yes or no)?"
+  health_insurance=gets.chomp
+
+  vampire_detection=nil
+
+  if age == 2016-year_of_birth && (garlic_bread=="yes" || health_insurance=="yes")
+    vampire_detection="Probably not a vampire."
+  end
+  if age != 2016-year_of_birth && (garlic_bread=="no" || health_insurance=="no")
+    vampire_detection="Probably a vampire."
+  end
+  if age != 2016-year_of_birth && (garlic_bread=="no" && health_insurance=="no")
+    vampire_detection="Almost certainly a vampire."
+  end
+  if name == "Drake" || name =="Cula" || name=="Tu Fang" 
+    vampire_detection="Definitely a vampire."
+  end
+  if vampire_detection==nil
+    puts "Results inconclusive."
+  end
+
+  puts vampire_detection
+
 end
-if age != 2016-year_of_birth && (garlic_bread=="no" || health_insurance=="no")
-  vampire_detection="Probably a vampire."
-end
-if age != 2016-year_of_birth && (garlic_bread=="no" && health_insurance=="no")
-  vampire_detection="Almost certainly a vampire."
-end
-if name == "Drake" || name =="Cula" || name=="Tu Fang" 
-  vampire_detection="Definitely a vampire."
-end
-if vampire_detection==nil
-  puts "Results inconclusive."
-end
-
-puts vampire_detection
-
 
