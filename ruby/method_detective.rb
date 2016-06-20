@@ -4,19 +4,29 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-# "iNvEsTiGaTiOn".<???>
+investigation1 = "iNvEsTiGaTiOn".swapcase
+investigation2 = "iNvEsTiGaTiOn".swapcase!
+puts investigation1 
+puts investigation2
 # => “InVeStIgAtIoN”
 
-# "zom".<???>
+zoom = "zom".insert(2, 'o')
+puts zoom
 # => “zoom”
 
-# "enhance".<???>
-# => "    enhance    "
 
-# "Stop! You’re under arrest!".<???>
+pad_sides = "enhance".center(15)
+puts pad_sides
+#=> "    enhance    "
+
+uppercase1 = "Stop! You’re under arrest!".upcase
+uppercase2 = "Stop! You’re under arrest!".upcase!
+puts uppercase1
+puts uppercase2
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+replace_string = "the usual".replace("the usual suspects")
+puts replace_string
 #=> "the usual suspects"
 
 # " suspects".<???>
@@ -37,3 +47,6 @@
 
 # "How many times does the letter 'a' appear in this string?".<???>
 # => 4
+
+
+
