@@ -5,7 +5,7 @@ puts "How many employees will be processed"
 number_of_emplyees= gets.to_i
 
 quiz=0
-until quiz==number_of_emplyees
+while quiz<=number_of_emplyees
   quiz+=1
   puts "Welcome to Werewolf Inc."
 
