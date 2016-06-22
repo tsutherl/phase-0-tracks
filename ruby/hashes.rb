@@ -22,10 +22,12 @@ def cleanup_data(client_info)
   case label
   when :age || :number_of_children
     client_info[label] = value.to_i
-  break
+    break
   when :has_dog || :likes_lamps
-    client_info[label] = value.
-
+    client_info[label] = value == "y"
+    break
+  end 
+end
 
 
 
@@ -45,13 +47,13 @@ puts "How many children does your client have?"
 puts "Please enter your the decor theme your client has requested."
   client_info[:decor_theme] = gets.chomp
 
-puts "Does your client have a dog?"
+puts "Does your client have a dog - type y/n?"
   client_info[:has_dog] = gets.chomp
 
 puts "What's your client's favorite color?"
   client_info[:fave_color] = gets.chomp
 
-puts "Does you client like lamps?"
+puts "Does you client like lamps - type y/n?"
   client_info[:likes_lamps] = gets.chomp
 
 puts "Any extra notes you'd like to add about your client?"
@@ -65,7 +67,7 @@ loop do
   update = gets.chomp
 
   if update == "none"
-    puts client_info
+    puts client_info.client_info
     exit
   else
     puts "Please enter new information to update the label."
