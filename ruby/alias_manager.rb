@@ -60,17 +60,22 @@ end
 puts "Enter your spy password."
 password = gets.chomp
 puts ""
-puts "Please enter your first and last name - capitalize the first letter for each."
-name = gets.chomp
-puts ""
-puts "Generating fake name..."
-puts ""
-puts generate_fake_name(name)
 
 
+loop do
+  puts "Please enter your first and last name and capitalize the first letter for each - type 'quit' to quit."
+  name = gets.chomp
 
-
-
+  if name == "quite" || name.empty?
+    exit
+  else
+  puts ""
+  puts "Generating fake name..."
+  puts ""
+  puts generate_fake_name(name)
+  puts ""
+  end
+end
 
 
 
