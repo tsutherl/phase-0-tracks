@@ -10,11 +10,9 @@
 #return fake name to spy
 
 
-
 def change_char(array_of_char)
   array_index = 0
   array_of_char.each do |char|
-
   vowels = "aeiou"
   consonants = "bcdfghjklmnpqrstvwxyz"
     if char == " "
@@ -42,40 +40,34 @@ def change_char(array_of_char)
 end
 
 
+def generate_fake_name(name) 
+  name = name.split(' ')
+  name[0] = name[0].downcase
+  name[1] = name[1].downcase
+  name = name.reverse!
+  last_name = name[0].split('')
+  first_name = name[1].split('')
+  last_name = change_char(last_name)
+  first_name = change_char(first_name)
+  last_name[0] = last_name[0].capitalize!
+  first_name[0] = first_name[0].capitalize!
+  space = [" "]
+  fake_name = last_name.concat(space.concat(first_name)) 
+  fake_name.join 
+end
 
-puts "Please enter your first and last name"
+
+puts "Enter your spy password."
+password = gets.chomp
+puts ""
+puts "Please enter your first and last name - capitalize the first letter for each."
 name = gets.chomp
-p name
-
-name = name.split(' ')
-
-name[0] = name[0].downcase
-name[1] = name[1].downcase
-
-name = name.reverse!
-
-p name
-
-last_name = name[0].split('')
-first_name = name[1].split('')
-#space = [" "]
+puts ""
+puts "Generating fake name..."
+puts ""
+puts generate_fake_name(name)
 
 
-
-
-#name = last_name + space + first_name
-
-last_name = change_char(last_name)
-first_name = change_char(first_name)
-last_name[0] = last_name[0].capitalize!
-first_name[0] = first_name[0].capitalize!
-p last_name
-p first_name
-space = [" "]
-
-fake_name = last_name.concat(space.concat(first_name)) 
-
-p fake_name.join 
 
 
 
