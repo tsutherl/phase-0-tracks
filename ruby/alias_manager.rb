@@ -62,23 +62,21 @@ password = gets.chomp
 puts ""
 
 
+fake_name_array = {}
+
 loop do
   puts "Please enter your first and last name and capitalize the first letter for each - type 'quit' to quit."
   name = gets.chomp
-
-  if name == "quite" || name.empty?
+  if name == "quit" || name.empty?
+    fake_name_array.each {|name, fake_name| puts "#{name} is now #{fake_name}"}
     exit
   else
   puts ""
   puts "Generating fake name..."
   puts ""
-  puts generate_fake_name(name)
+  fake_name_array[name] = generate_fake_name(name)
   puts ""
   end
 end
-
-
-
-
 
 
