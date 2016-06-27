@@ -1,7 +1,7 @@
-#SPECIES --------------------
+#SPECIES -------------------
 #Puppy
 
-#CHARACTERISTICS ------------
+#CHARACTERISTICS -----------
 #Name: varies 
 #Energy level: varies
 #Cute: yes  
