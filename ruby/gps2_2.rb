@@ -74,9 +74,21 @@ end
 
 #print_list(grocery_list)
 
+grocery_list = new_grocery_list("")
 
-  
+add_item(grocery_list, "Lemonade", 2)
 
+add_item(grocery_list, "Tomatoes", 3)
+
+add_item(grocery_list, "Onions", 1)
+
+add_item(grocery_list, "Ice Cream", 4)
+
+remove_item(grocery_list, "Lemonade")
+
+update_quantity(grocery_list, "Ice Cream", 1)
+
+print_list(grocery_list)
 
 
 
