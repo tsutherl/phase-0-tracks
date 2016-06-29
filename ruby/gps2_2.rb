@@ -40,12 +40,7 @@ end
 #grocery_list = new_grocery_list("apples yogurt milk")
 
 def add_item(hash, item, quantity)
-  if hash[item] == nil
-    hash[item] = quantity
-  else
-    current = hash[item]
-    hash[item] = current + quantity
-  end
+  hash[item] = hash[item].to_i + quantity
   hash
 end
 
