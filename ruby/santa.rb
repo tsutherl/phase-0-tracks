@@ -16,6 +16,36 @@ class Santa
     puts "That was a good #{cookie_type}!"
   end
 
+  #attribute changing methods 
+  def celebrate_birthday
+    @age = age + 1
+  end
+
+  def get_mad_at(name)
+    @reindeer_ranking.insert(-1, @reindeer_ranking.delete_at(@reindeer_ranking.index(name))) 
+  end
+
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
+  #getter methods (readable)
+  def age
+    @age 
+  end
+
+  def ethnicity
+    @ethnicity
+  end
+
+  def gender
+    @gender
+  end
+
+  def reindeer_ranking
+    @reindeer_ranking
+  end
+
 end
 
 
@@ -42,7 +72,7 @@ end
 =end
 
 santas = []
-
+index = 0
 loop do
   puts "Hello Santa please enter your gender - type 'done' when all info has been entered."
   gender = gets.chomp
@@ -51,13 +81,36 @@ loop do
   else
     puts "Please enter your ethnicity"
     ethnicity = gets.chomp
-    santas << Santa.new(gender, ethnicity)  
+    santas << Santa.new(gender, ethnicity) 
+    santas[index].celebrate_birthday
+    index += 1 
   end
 end
 
+p santas
 
+index = 0
+santas[0].reindeer_ranking.each do |reindeer|
+  index += 1
+  puts "#{reindeer} is at rank #{index}" 
+end
 
+santas[0].get_mad_at("Dasher")
+puts ""
 
+index = 0
+santas[0].reindeer_ranking.each do |reindeer|
+  index += 1
+  puts "#{reindeer} is at rank #{index}" 
+end
+
+puts ""
+puts "Gender: #{santas[0].gender}"
+santas[0].gender = "Trans Female"
+puts "Gender: #{santas[0].gender}"
+
+p santas[0].age
+p santas[0].ethnicity
 
 
 
