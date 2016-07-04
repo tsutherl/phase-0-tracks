@@ -1,6 +1,10 @@
 class Santa
 
-  def initialize
+  def initialize(gender, ethnicity)
+    @gender = gender
+    @ethnicity = ethnicity
+    @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+    @age = 0
     puts "Initializing Santa instance ..."
   end
 
@@ -15,8 +19,47 @@ class Santa
 end
 
 
-santa1 = Santa.new
+#santa1 = Santa.new
+#santa1.speak
+#santa1.eat_milk_and_cookies("chocolate chip cookie")
 
-santa1.speak
+=begin
+santas = []
+santas << Santa.new("agender", "black")
+santas << Santa.new("female", "Latino")
+santas << Santa.new("bigender", "white")
+santas << Santa.new("male", "Japanese")
+santas << Santa.new("female", "prefer not to say")
+santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
+santas << Santa.new("N/A", "N/A")
 
-santa1.eat_milk_and_cookies("chocolate chip cookie")
+puts "Testing each Santa instance in the array to make sure it can speak and eat a cookie!"
+
+santas.each do |santa|
+  santa.speak
+  santa.eat_milk_and_cookies("sugar cookie")
+end
+=end
+
+santas = []
+
+loop do
+  puts "Hello Santa please enter your gender - type 'done' when all info has been entered."
+  gender = gets.chomp
+  if gender == 'done'
+    break
+  else
+    puts "Please enter your ethnicity"
+    ethnicity = gets.chomp
+    santas << Santa.new(gender, ethnicity)  
+  end
+end
+
+
+
+
+
+
+
+
+
