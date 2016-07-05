@@ -1,13 +1,17 @@
 class Santa
+  
   attr_reader :age, :ethnicity, :reindeer_ranking
   attr_accessor :gender
 
   def initialize(gender, ethnicity)
     @gender = gender
+    puts "Gender: #{@gender}"
     @ethnicity = ethnicity
+    puts "ethnicity: #{@ethnicity}"
     @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-    @age = 0
-    puts "Initializing Santa instance ..."
+    @age = rand(140)
+    puts "Age: #{@age}"
+    #puts "Initializing Santa instance ..."
   end
 
   def speak
@@ -17,8 +21,7 @@ class Santa
   def eat_milk_and_cookies(cookie_type)
     puts "That was a good #{cookie_type}!"
   end
-
-  #attribute changing methods 
+ 
   def celebrate_birthday
     @age = age + 1
   end
@@ -28,11 +31,6 @@ class Santa
   end
 
 end
-
-
-#santa1 = Santa.new
-#santa1.speak
-#santa1.eat_milk_and_cookies("chocolate chip cookie")
 
 =begin
 santas = []
@@ -53,21 +51,27 @@ end
 =end
 
 santas = []
+
+genders = ["Agender", "Androgyne", "Androgynous", "Bigender", "Cis", "Cisgender", "Cis Female", "Cis Male", "Cis Man",
+"Cis Woman", "Cisgender Female", "Cisgender Male", "Cisgender Man", "Cisgender Woman", "Female to Male", "FTM",
+"Gender Fluid", "Gender Nonconforming", "Gender Questioning", "Gender Variant", "Genderqueer", "Intersex", "Male to Female",
+"MTF", "Neither", "Neutrois", "Non-binary", "Other", "Pangender", "Trans", "Trans Female", "Trans Male", "Trans Man",
+"Trans Person", "Trans Woman", "Transfeminine", "Transgender", "Transgender Female", "Transgender Male", "Transgender Man",
+"Transgender Person", "Transgender Woman", "Transmasculine", "Transsexual", "Transsexual Female", "Transsexual Male",
+"Transsexual Man", "Transsexual Person", "Transsexual Woman", "N/A"]
+
+ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "N/A"]
+
 index = 0
-loop do
-  puts "Hello Santa please enter your gender - type 'done' when all info has been entered."
-  gender = gets.chomp
-  if gender == 'done'
-    break
-  else
-    puts "Please enter your ethnicity"
-    ethnicity = gets.chomp
-    santas << Santa.new(gender, ethnicity) 
-    santas[index].celebrate_birthday
-    index += 1 
-  end
+until index == 30
+    gender = genders.sample
+    ethnicity = ethnicities.sample
+    Santa.new(gender, ethnicity)
+    index += 1
+    puts "" 
 end
 
+=begin
 p santas
 
 index = 0
@@ -93,7 +97,7 @@ puts "Gender: #{santas[0].gender}"
 p santas[0].age
 p santas[0].ethnicity
 
-
+=end
 
 
 
