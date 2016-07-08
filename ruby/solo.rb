@@ -22,7 +22,7 @@ class Candy
 
   def initialize(type, sweet, sour)
     @type = type
-    @number_of_pieces = 0  
+    @number_of_pieces = rand(15)  
     @sweet = sweet
     @sour = sour
   end
@@ -68,16 +68,43 @@ class Candy
   end
 end 
 
-lollipop = Candy.new("lollipop", true, true)
-lollipop.add_pieces(4)
-lollipop.melted
-p lollipop.number_of_pieces
-lollipop.went_through_laundry("shirt")
-lollipop.hidden("under the bed")
-lollipop.dropped
-lollipop.eaten(5)
-p lollipop.number_of_pieces
-      
+# lollipop = Candy.new("lollipop", true, true)
+# lollipop.add_pieces(4)
+# lollipop.melted
+# p lollipop.number_of_pieces
+# lollipop.went_through_laundry("shirt")
+# lollipop.hidden("under the bed")
+# lollipop.dropped
+# lollipop.eaten(5)
+# p lollipop.number_of_pieces
 
+candy_array = []
+puts "Hey there! Wanna create some candy? Type 'yes' or um uh I guess . . . 'no'."
 
+loop do 
+  answer = gets.chomp
+  if answer == 'yes'
+    puts "Cool, what type of candy?"
+    type = gets.chomp
+    puts "Do you want your candy to be sweet - 'yes' or 'no'? Seems like a funny question but you never know."
+    sweet = gets.chomp == 'yes'
+    puts "Do you want your candy to be sour - 'yes' or 'no'?"
+    sour = gets.chomp =='yes'
+    candy_array << Candy.new(type, sweet, sour)
+    puts "Wanna create more candy? Type 'yes' or 'no'."
+  elsif answer == 'no'
+    puts ""
+    candy_array.each do |candy| 
+      puts "Type: #{candy.type}"
+      puts "Sweet: #{candy.sweet}"
+      puts "Sour: #{candy.sour}"
+      puts ""
+    end
+    exit
+  else 
+    puts "Yo you gotta enter 'yes' or 'no'."
+  end
+end
+
+     
 
