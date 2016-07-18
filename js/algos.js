@@ -44,7 +44,7 @@ function ArrayBuilder(length) {
   for (var j = 0; j < length; j++) {
     var randNum = Math.floor((Math.random() * 10) + 1);
     for (var k = 0; k < randNum; k++) {
-      var randLetter = Math.floor((Math.random() * 10) + 1);
+      var randLetter = Math.floor(Math.random() * 25);
       newStr += str[randLetter];
     }
     newStrAry[j] = newStr;
