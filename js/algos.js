@@ -7,20 +7,51 @@
     //make the variable equal the length of the current string in the array
     //make the longest variable equal to the current string
 
-function longest_string(string) {
-  var string_length = 0;
+function LongestString(string) {
+  var stringLength = 0;
   var longest = "";
   for (var i = 0; i < string.length; i++) {
-    if (string[i].length == string_length) {
+    if (string[i].length == stringLength) {
       longest += ", " + string[i];
     } 
-    if (string[i].length > string_length) {
-      string_length = string[i].length;
+    if (string[i].length > stringLength) {
+      stringLength = string[i].length;
       longest = string[i];
     }
   }
   return longest;
 }
 
-console.log(longest_string(["long phrase","longest phrase","longer phrase"]))
-console.log(longest_string(["hello", "hi there", "well", "ummmmmmm", "dunno"]))
+//compare objects to see if they share any of the same keys
+  //if they share a key
+    //check to see if the value is also the same
+      //if this is also true return true
+      //otherwise keep searching for matching keys
+
+function ShareKeyValuePair(object1, object2) {
+  for (var key in object1) {
+      if (object2.hasOwnProperty(key) && object1[key] == object2[key]) {
+        return true;
+      }
+  }
+  return false;
+}
+
+
+console.log(LongestString(["long phrase","longest phrase","longer phrase"]))
+console.log(LongestString(["hello", "hi there", "well", "ummmmmmm", "dunno"]))
+
+
+var tati = {likes: 'ice cream', from: 'Wisco'};
+var soren = {likes: 'chocolate', from: 'NYC'};
+
+console.log(ShareKeyValuePair(tati, soren));
+
+var tati = {likes: 'ice cream', from: 'Wisco', school: 'Oberlin'};
+var soren = {likes: 'chocolate', from: 'NYC', school: 'Oberlin'};
+
+
+console.log(ShareKeyValuePair(tati, soren));
+
+
+
