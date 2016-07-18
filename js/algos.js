@@ -37,21 +37,48 @@ function ShareKeyValuePair(object1, object2) {
   return false;
 }
 
+function ArrayBuilder(length) {
+  var str = 'abcdefghijklmnopqrstuvwxyz';
+  var newStrAry = []
+  var newStr = "";
+  for (var j = 0; j < length; j++) {
+    var randNum = Math.floor((Math.random() * 10) + 1);
+    for (var k = 0; k < randNum; k++) {
+      var randLetter = Math.floor((Math.random() * 10) + 1);
+      newStr += str[randLetter];
+    }
+    newStrAry[j] = newStr;
+    newStr = "";
+  }
+  return newStrAry
+}
 
-console.log(LongestString(["long phrase","longest phrase","longer phrase"]))
-console.log(LongestString(["hello", "hi there", "well", "ummmmmmm", "dunno"]))
+
+// console.log(LongestString(["long phrase","longest phrase","longer phrase"]))
+// console.log(LongestString(["hello", "hi there", "well", "ummmmmmm", "dunno"]))
 
 
-var tati = {likes: 'ice cream', from: 'Wisco'};
-var soren = {likes: 'chocolate', from: 'NYC'};
+// var tati = {likes: 'ice cream', from: 'Wisco'};
+// var soren = {likes: 'chocolate', from: 'NYC'};
 
-console.log(ShareKeyValuePair(tati, soren));
+// console.log(ShareKeyValuePair(tati, soren));
 
-var tati = {likes: 'ice cream', from: 'Wisco', school: 'Oberlin'};
-var soren = {likes: 'chocolate', from: 'NYC', school: 'Oberlin'};
+// var tati = {likes: 'ice cream', from: 'Wisco', school: 'Oberlin'};
+// var soren = {likes: 'chocolate', from: 'NYC', school: 'Oberlin'};
 
 
-console.log(ShareKeyValuePair(tati, soren));
+// console.log(ShareKeyValuePair(tati, soren));
+
+// console.log(ArrayBuilder(3));
+
+for (var i = 0; i <= 10; i++) {
+  var length = Math.floor((Math.random() * 10) + 1);
+  var array = ArrayBuilder(length);
+  console.log(array);
+  console.log(LongestString(array));
+  console.log("");
+}
+
 
 
 
